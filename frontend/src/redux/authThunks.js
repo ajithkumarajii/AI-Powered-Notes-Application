@@ -19,7 +19,6 @@ export const login = (credentials) => async (dispatch) => {
 export const signup = (info) => async (dispatch) => {
   try {
     await signupApi(info);
-    // redirect to login after signup
   } catch (err) {
     dispatch(setAuthError("Signup failed. Try again."));
     throw err;

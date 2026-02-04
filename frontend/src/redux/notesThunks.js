@@ -45,7 +45,6 @@ export const summarizeNote = (id) => async (dispatch, getState) => {
   dispatch(setLoading());
   try {
     const res = await api.post(`/notes/${id}/summarize`);
-    // Update summary in the correct note
     const notes = getState().notes.notes.map(note =>
       note._id === id ? { ...note, summary: res.data.summary } : note
     );
