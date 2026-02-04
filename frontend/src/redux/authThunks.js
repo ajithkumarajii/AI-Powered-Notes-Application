@@ -1,4 +1,4 @@
-import { setAuth, logout, setAuthError } from "./authSlice";
+import { setAuth, setAuthError } from "./authSlice";
 import { login as loginApi, signup as signupApi } from "../services/authService";
 
 export const login = (credentials) => async (dispatch) => {
