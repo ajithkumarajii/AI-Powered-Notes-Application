@@ -20,6 +20,7 @@ const NoteEditor = ({ note, onSave }) => {
   return (
     <div className="note-editor-container">
       <form className="note-editor-form" onSubmit={handleSubmit}>
+        <label>Title</label>
         <input
           type="text"
           placeholder="Title"
@@ -27,6 +28,7 @@ const NoteEditor = ({ note, onSave }) => {
           onChange={(e) => setTitle(e.target.value)}
           required
         />
+        <label>Content</label>
         <textarea
           placeholder="Content"
           value={content}

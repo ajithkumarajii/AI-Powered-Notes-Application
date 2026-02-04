@@ -13,7 +13,6 @@ const SummaryView = ({ note }) => {
   const summary = reduxNote?.summary || "";
 
   useEffect(() => {
-    // Update local error/loading if needed
     setError("");
     setLoading(false);
   }, [summary]);
@@ -49,8 +48,8 @@ const SummaryView = ({ note }) => {
       {error && <ErrorMessage message={error} />}
       {summary && (
         <div className="summary-content">
-          <h4>AI Summary</h4>
-          <p>{summary}</p>
+          <h4 className="summary-title">AI Summary</h4>
+          <p className="summary-text">{summary}</p>
           <button onClick={handleRegenerate} className="edit-btn">
             Regenerate
           </button>
